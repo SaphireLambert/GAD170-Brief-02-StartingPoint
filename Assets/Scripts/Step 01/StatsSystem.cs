@@ -11,7 +11,8 @@ using UnityEngine;
 /// </summary>
 public class StatsSystem : MonoBehaviour
 {
-    public float playerHealth = 0;
+    public float playerHealth = 100;
+    public float playerMaxHealth = 100;
 
     /// Our physical stats that determine our dancing stats.
     public int agility = 0;
@@ -33,6 +34,9 @@ public class StatsSystem : MonoBehaviour
     public void GeneratePhysicalStatsStats()
     {
         // Let's set up agility, intelligence and strength to some default Random values.
+        strength = Random.Range(0, 11);
+        intelligence = Random.Range(0, 11);
+        agility = Random.Range(0, 11);
     }
 
     /// <summary>

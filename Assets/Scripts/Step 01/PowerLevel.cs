@@ -22,7 +22,7 @@ public class PowerLevel : MonoBehaviour
         int myStyle = myStats.style;
         int myRhthm = myStats.rhythm;
 
-        return 0; // instead of returning 0 we probably want to return our current power level
+        return myLuck + myStyle + myRhthm; // instead of returning 0 we probably want to return our current power level
     }
 
     /// <summary>
