@@ -11,8 +11,8 @@ using UnityEngine;
 /// </summary>
 public class StatsSystem : MonoBehaviour
 {
-    public float playerHealth = 100;
-    public float playerMaxHealth = 100;
+    public float playerHealth = 1000;
+    public float playerMaxHealth = 1000;
 
     /// Our physical stats that determine our dancing stats.
     public int agility = 0;
@@ -57,10 +57,11 @@ public class StatsSystem : MonoBehaviour
         // now that we have some stats and our multiplier values let's calculate our style, luck and ryhtmn based on these values, hint your going to need to convert ints to floats, then floats to ints.
 
         // style should be based off our strength and be converted at a rate of 1 : 1.
-
+        style = strength * 1;
         // luck should be based off our intelligence and be converted at a rate of 1 : 1.5f
-
+        float luck = intelligence * 1.5f;
         // rhythm should be based off our agility and be converted at a rate of 1 : 0.5.
+        float rhythm = agility * 0.5f;
 
     }
 

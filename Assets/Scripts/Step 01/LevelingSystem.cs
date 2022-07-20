@@ -44,7 +44,8 @@ public class LevelingSystem : MonoBehaviour
         // We probably want to check to see if we've gained enough xp to trigger a level up to occur.
         if (currentXp >= currentXPThreshold)
         {
-            LevelUp;
+            LevelUp();
+            
         }
 
         // if we do then let's call our level up function.
@@ -56,7 +57,8 @@ public class LevelingSystem : MonoBehaviour
     public void LevelUp()
     {
         // So let's increase our current level, but let's also recalculate our XP threshold to take into account the new level we've just gained.
-        currentLevel++; 
+        currentLevel++;
+        currentXPThreshold = currentLevel * 100;
         
     }
 
