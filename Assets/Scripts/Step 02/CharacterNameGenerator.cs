@@ -13,8 +13,21 @@ public class CharacterNameGenerator : MonoBehaviour
  
     [Header("Possible first names")]
     private List<string> firstNames = new List<string>(); // a list of all possible first names for us to use.
+    enum teamOneFnames
+    {
+        John,
+        Pickles,
+        Nathan
+    }
+    enum teamTwoFnames
+    {
+        Josh,
+        Gunther,
+        Billy
+    }
     [Header("Possible last names")]
     private List<string> lastNames = new List<string>(); // a list of all possible last names for us to use.
+
     [Header("Possible nicknames")]
     private List<string> nicknames = new List<string>(); // a list of all possible nick names for us to use.
 
@@ -31,7 +44,15 @@ public class CharacterNameGenerator : MonoBehaviour
     public void CreateNames()
     {
         // So here we would ideally want to be able to add some names to our first names, last names and nick names lists.
+    
+    {
+        
+    }
 
+    
+    {
+
+    }
     }
 
     /// <summary>
