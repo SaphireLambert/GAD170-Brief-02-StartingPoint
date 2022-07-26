@@ -29,6 +29,19 @@ public class FightManager : MonoBehaviour
 
 
         // We should probably determine here who has won, and who has lost by comparing their power levels.
+        if (playerOnePowerLevel > playerTwoPowerLevel)
+        {
+            Debug.Log("Player One Wins");
+        }
+        else if (playerTwoPowerLevel > playerOnePowerLevel)
+        {
+            Debug.Log("Player Two Wins");
+        }
+        else
+        {
+            Debug.Log("Draw");
+        }
+
         // we should also do some damage or heal the appropriate characters.
         // we could also give them some XP if we want to. 
         // so we have the character class, which means any variables,references and functions we can access.

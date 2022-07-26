@@ -11,26 +11,54 @@ using UnityEngine;
 public class CharacterNameGenerator : MonoBehaviour
 {
  
-    [Header("Possible first names")]
-    private List<string> firstNames = new List<string>(); // a list of all possible first names for us to use.
-    enum teamOneFnames
+   
+    public enum teamOneFname
     {
         John,
         Pickles,
         Nathan
     }
-    enum teamTwoFnames
+    public enum teamTwoFname
     {
         Josh,
         Gunther,
         Billy
     }
-    [Header("Possible last names")]
-    private List<string> lastNames = new List<string>(); // a list of all possible last names for us to use.
+   
+    public enum teamOneLname
+    {
+        Gunderberg,
+        Shmickles,
+        Drake
+    }
+    public enum teamTwoLname
+    {
+        Garner,
+        Eisenhower,
+        Butcher
+    }
 
-    [Header("Possible nicknames")]
-    private List<string> nicknames = new List<string>(); // a list of all possible nick names for us to use.
+ 
 
+    public enum teamOneNickname
+    {
+        Hotshot,
+        Bullseye,
+        TheCaptain
+    }
+   public enum teamTwoNickname
+    {
+        BigBlondie,
+        TheLeader,
+        Eradicator
+
+    }
+    public teamOneFname currentTeamOneFnames;
+    public teamOneLname currentTeamOneLnames;
+    public teamOneNickname currentTeamOneNicknames;
+    public teamTwoFname currentTeamTwoFnames;
+    public teamTwoLname currentTeamTwoLnames;
+    public teamTwoNickname currentTeamTwoNicknames;
 
     private void Awake()
     {
@@ -43,16 +71,9 @@ public class CharacterNameGenerator : MonoBehaviour
     /// </summary>
     public void CreateNames()
     {
-        // So here we would ideally want to be able to add some names to our first names, last names and nick names lists.
+        // So here we would ideally want to be able to add some names to our first names, last names and nick names lists. (currently at the beggining of the class)
     
-    {
-        
-    }
-
-    
-    {
-
-    }
+  
     }
 
     /// <summary>
@@ -62,6 +83,13 @@ public class CharacterNameGenerator : MonoBehaviour
     public void SetIndividualCharacter(CharacterName character)
     {
         // So here rather than each character being called Blanky Blank Blank, we probably want it to be a random first,last and nickname
+        currentTeamOneFnames = (teamOneFname)Random.Range(1, 4);
+        currentTeamOneLnames = (teamOneLname)Random.Range(1, 4);
+        currentTeamOneNicknames = (teamOneNickname)Random.Range(1, 4);
+        currentTeamTwoFnames = (teamTwoFname)Random.Range(1, 4);
+        currentTeamTwoLnames = (teamTwoLname)Random.Range(1, 4);
+        currentTeamTwoNicknames = (teamTwoNickname)Random.Range(1, 4);
+
 
     }
 
@@ -75,6 +103,11 @@ public class CharacterNameGenerator : MonoBehaviour
         // so here we have a list of character names coming in.
         // we should probably loop over that list of charcter names, and then for each chacter set thei first, last and nickname a random one from our lists
         // if you want to get fancy you could use another function within this script to help out here.
+        for (int i = 0; i < teamCharacters.Count; i++)
+        {
+            //teamCharacters[i].teamOneFname = ((teamOneFname)Random.Range(1, 4)).ToString();  (Keep getting error and dont know how to fix)
+            //teamCharacters[i].teamOneLname = ((teamOneLname)Random.Range(1, 4)).ToString();  (Keep getting error and dont know how to fix)
+        }
 
     }
 }
